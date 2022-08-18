@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".screens.homeFragment"
+    android:background="@color/darker_blue">
+
+    <LinearLayout
+        android:id="@+id/ly_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginHorizontal="@dimen/_30sdp">
+
+        <TextView
+            android:id="@+id/tv_greeting_name"
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Buenos dias,  Javier"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15ssp"
+            android:fontFamily="@font/myfont"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingStart="@dimen/_5sdp"/>
+
+        <ImageView
+            android:id="@+id/img_profile"
+            android:contentDescription="@string/account_img"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_account"
+            android:scaleType="centerCrop"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/frase_jessie_tuto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/ly_head"
+        app:layout_constraintEnd_toEndOf="@id/ly_head"
+        app:layout_constraintTop_toBottomOf="@id/ly_head"
+        android:text="@string/jessie_frase"
+        android:textColor="#8A8A8A"
+        android:textSize="@dimen/_9ssp"
+        android:textStyle="bold"
+        android:fontFamily="@font/myfont"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_marginHorizontal="@dimen/_30sdp"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_agenda"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_80sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/frase_jessie_tuto"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:layout_marginHorizontal="@dimen/_25sdp"
+        android:backgroundTint="@color/calendar"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:cardUseCompatPadding="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/agenda"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ly_agenda_tucita"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                android:layout_marginStart="@dimen/_10sdp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/agenda_tu_clase"
+                    android:textSize="@dimen/_13ssp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/myfont"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/no_pares_de_prepararte"
+                    android:textSize="@dimen/_10ssp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/myfont"
+                    android:textColor="@color/black"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/img_calendar"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:src="@drawable/ic_calendar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginEnd="@dimen/_25sdp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tv_temas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Temas"
+        android:textColor="@color/white"
+        android:fontFamily="@font/myfont"
+        android:textSize="@dimen/_15ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cv_agenda"
+        android:layout_marginStart="@dimen/_32sdp"
+        android:layout_marginTop="@dimen/_16sdp"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_categories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_25sdp"
+        android:layout_marginEnd="@dimen/_25sdp"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_temas">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_categories"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"/>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

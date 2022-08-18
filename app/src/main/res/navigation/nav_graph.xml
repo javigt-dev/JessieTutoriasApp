@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.jessietutoriasapp.screens.homeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/libreriaFragment"
+        android:name="com.example.jessietutoriasapp.screens.libreriaFragment"
+        android:label="fragment_temas"
+        tools:layout="@layout/fragment_temas" />
+    <fragment
+        android:id="@+id/trophiesFragment"
+        android:name="com.example.jessietutoriasapp.screens.trophiesFragment"
+        android:label="fragment_trophies"
+        tools:layout="@layout/fragment_trophies" />
+    <fragment
+        android:id="@+id/favoritesFragment"
+        android:name="com.example.jessietutoriasapp.screens.favoritesFragment"
+        android:label="fragment_favorites"
+        tools:layout="@layout/fragment_favorites" />
+</navigation>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/ic_home"
+        android:title="Home"/>
+    <item
+        android:id="@+id/libreriaFragment"
+        android:icon="@drawable/ic_listas_temas"
+        android:title="Libreria"/>
+    <item
+        android:id="@+id/trophiesFragment"
+        android:icon="@drawable/ic_trophies"
+        android:title="Trofeos"/>
+    <item
+        android:id="@+id/favoritesFragment"
+        android:icon="@drawable/ic_bookmark"
+        android:title="Favoritos"/>
+</menu>
