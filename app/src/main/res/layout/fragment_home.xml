@@ -130,22 +130,26 @@
         android:layout_marginStart="@dimen/_32sdp"
         android:layout_marginTop="@dimen/_16sdp"/>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cv_categories"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_25sdp"
-        android:layout_marginEnd="@dimen/_25sdp"
-        app:cardCornerRadius="@dimen/_10sdp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_temas">
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:id="@+id/cv_categories"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="@dimen/_5sdp"-->
+<!--        android:layout_marginEnd="@dimen/_5sdp"-->
+<!--        app:cardCornerRadius="@dimen/_8sdp"-->
+<!--        android:backgroundTint="@color/calendar"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/tv_temas">-->
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_categories"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scrollbars="none"/>
-
-    </androidx.cardview.widget.CardView>
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/_5sdp"
+            tools:listitem="@layout/card_tema"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_temas"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
